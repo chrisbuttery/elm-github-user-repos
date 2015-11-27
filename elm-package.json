@@ -1,7 +1,7 @@
 {
     "version": "1.0.0",
     "summary": "Look up github users. Written in Elm",
-    "repository": "https://github.com/chrisbuttery/snoophub.git",
+    "repository": "https://github.com/chrisbuttery/elm-snoophub.git",
     "license": "BSD3",
     "source-directories": [
         "."
