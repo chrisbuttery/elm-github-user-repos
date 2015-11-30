@@ -89,18 +89,6 @@ model =
 
 
 {--
-  Action = Union Type
-  It can either be:
-  Input: which is a String
-  UpdateResults: which 'might' be a String
---}
-
-type Action = Input String
-  | UpdateResults (Maybe (List Repo))
-  | Tick Time
-
-
-{--
   debounceTime = half a second
 --}
 
@@ -124,6 +112,17 @@ elapsedTimeOf debounceState clockTime =
 
 
 -- UPDATE
+
+{--
+  Action = Union Type
+  It can either be:
+  Input: which is a String
+  UpdateResults: which 'might' be a String
+--}
+
+type Action = Input String
+  | UpdateResults (Maybe (List Repo))
+  | Tick Time
 
 {--
   Update:
@@ -155,15 +154,20 @@ update address model =
 
     {--
       on 'UpdateResults'
-      if results exists, set 'message' to Nothing or a String
+      if there's no query, set message to Nothing
+      otherwise if no results exists, set 'message' to Nothing or a String
       set the results  on the model, don't trigger anything
     --}
 
     UpdateResults results ->
-      if List.length (Maybe.withDefault [] results) == 0 then
-        ({ model | results = results, message = Just "Github user not found :(" }, Effects.none)
-      else
-        ({ model | results = results, message = Nothing }, Effects.none)
+      let
+        msg =
+          if model.query == "" then Nothing else
+            if List.length (Maybe.withDefault [] results) == 0
+            then Just ("Github user '" ++ (String.toLower model.query) ++ "' not found :(")
+            else Nothing
+      in
+        ({ model | results = results, message = msg }, Effects.none)
 
     {--
       on 'Tick'
@@ -284,4 +288,5 @@ app =
 main = app.html
 
 port tasks : Signal (Task.Task Never ())
-port tasks = app.tasks
+port tasks =
+  app.tasks
