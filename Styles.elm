@@ -40,6 +40,7 @@ message =
   , ("border", "1px solid #e5e5e5")
   , ("border-radius", "2px")
   , ("font-size", "1.2em")
+  , ("margin", "20px 0 0 0")
   , ("padding", "30px")
   , ("text-align", "center")
   ]
