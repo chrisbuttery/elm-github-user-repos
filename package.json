@@ -1,0 +1,23 @@
+{
+  "name": "elm-github-user-repos",
+  "version": "1.0.0",
+  "description": "Look up github users. Written in Elm",
+  "main": "index.js",
+  "scripts": {
+    "build": "elm-make src/Main.elm --output dist/elm.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrisbuttery/elm-github-user-repos.git"
+  },
+  "author": "Chris Buttery <info@chrisbuttery.com> (http://www.chrisbuttery.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chrisbuttery/elm-github-user-repos/issues"
+  },
+  "homepage": "https://github.com/chrisbuttery/elm-github-user-repos#readme",
+  "dependencies": {
+    "elm": "^0.17.0"
+  },
+  "private": true
+}

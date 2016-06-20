@@ -1,0 +1,295 @@
+body {
+  background: #f7f3e8;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 300;
+  font-family: sans-serif;
+}
+
+/**
+ * layout
+ */
+
+.container {
+  font-size: 1em;
+  margin: 0 auto;
+  max-width: 800px;
+  width: 70%;
+}
+
+.header {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.body {
+  min-height: 400px;
+  position: relative;
+}
+
+.app-title {
+  color: #c7c2b1;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  text-shadow: 0 1px 0 #fff;
+}
+
+/**
+ * form
+ */
+
+.form {
+  background-color: #fff;
+  box-shadow: 0 5px 3px -3px rgba(0,0,0,0.05);
+  overflow: hidden;
+  padding: 20px 30px;
+  text-align: center;
+}
+
+.filter {
+  background: #caf1df;
+  border-top: 1px solid #a9eacc;
+  margin: 20px -30px -20px -30px;
+  padding: 20px 30px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.label {
+  color: #6c9c85;
+}
+
+.filter__label {
+  color: #7fb39a;
+}
+
+.filter__options {
+  display: inline-block;
+}
+
+.filter__option-label {
+  margin: 0 15px;
+}
+
+.filter__option-input {
+  margin-right: 5px;
+}
+
+.input {
+  background: #e3f8ff;
+  border-radius: 5px;
+  border: none;
+  box-sizing: border-box;
+  color: #8d9aa4;
+  font-size: 1.5em;
+  height: 50px;
+  margin: 10px 0;
+  outline: none;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+input[placeholder] {
+   color: #5497a9;
+}
+
+/**
+ * profile
+ */
+
+.profile {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.profile__image {
+  display: block;
+  position: relative;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  margin: 0 auto;
+  box-shadow: 0 5px 3px -3px rgba(0,0,0,0.05);
+}
+
+.profile__image img {
+  width: 60px;
+  height: 60px;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.username {
+  margin-top: 15px;
+  display: inline-block;
+  color: #cec3a2;
+  font-size: 1.3em;
+  text-decoration: none;
+  position: relative;
+  z-index: 2;
+}
+
+.username:hover{
+  text-decoration: underline;
+  color: #b9b29b;
+}
+
+/**
+ * Main body (repo index)
+ */
+
+.repos {
+  font-size: 1em;
+  margin-top: 40px;
+  position: relative;
+  z-index: 0;
+}
+
+.repo {
+  background: #fdfcfb;
+  box-shadow: 0 5px 3px -3px rgba(0,0,0,0.05);
+  color: #b9b19c;
+  font-size: 1em;
+  margin: 10px 0 0 0;
+  padding: 20px 30px;
+  position: relative;
+}
+
+.meta {
+  background: #fff5d5;
+  bottom: 0;
+  color: #cebe92;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+  top: 0;
+  width: 160px;
+}
+
+.meta--col {
+  display: table;
+  float: left;
+  height: 100%;
+  position: relative;
+  width: 80px;
+}
+
+.meta--col:nth-child(2):after {
+  background: #efe7d0;
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1px;
+}
+
+.meta__data {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.meta__count {
+  display: block;
+  font-size: 1.5em;
+  font-weight: 300;
+  letter-spacing: -1px;
+}
+
+.meta__title {
+  color: #b5a67c;
+  display: inline-block;
+  font-size: 0.7em;
+  line-height: 1.3;
+  margin-top: 10px;
+}
+
+.copy {
+  margin-right: 160px;
+  overflow: hidden;
+}
+
+.name {
+  color: #62bdd6;
+  display: block;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+/**
+ * notice
+ */
+
+.notice {
+  background: #73c6dc;
+  box-shadow: 0 5px 3px -3px rgba(0,0,0,0.2);
+  color: #fff;
+  line-height: 1.5;
+  margin-top: 10px;
+  padding: 15px 60px;
+  position: relative;
+  text-align: center;
+}
+
+.notice__text {
+  margin-left: 10px;
+}
+
+.smiley {
+  display: inline-block;
+  transform: rotate(90deg);
+}
+
+.close {
+  background: #5cb5cd;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 40px;
+}
+
+.close:after {
+  content: "\00D7";
+  font-size: 1.3em;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+/**
+ * loading state
+ */
+
+.is-loading {
+  background: rgba(247, 243, 232, 0.71);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.is-loading svg {
+  fill: #c7c2b1;
+  left: 50%;
+  position: absolute;
+  top: 10%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 60px;
+}
+
+/**
+ * utilities
+ */
+
+.hidden {
+  display: none;
+}
