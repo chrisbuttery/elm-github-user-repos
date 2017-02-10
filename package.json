@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/chrisbuttery/elm-github-user-repos#readme",
   "dependencies": {
-    "elm": "^0.17.0"
+    "elm": "^0.18.0"
   },
   "private": true
 }
