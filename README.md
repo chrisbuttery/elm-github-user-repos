@@ -2,7 +2,7 @@
 
 Another [elm-lang](http://elm-lang.org/) demo using the github API.
 
-This demo app lists a GitHub user's repositories (30).
+[This demo app](http://chrisbuttery.github.io/elm-github-user-repos/dist/index.html) lists a GitHub user's repositories (30).
 
 Upgraded to `0.18`.
 
